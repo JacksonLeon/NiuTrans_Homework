@@ -3,9 +3,16 @@
 课堂练习：[基于NiuTensor的FNNLM](https://gitee.com/JacksonLeon/NiuTrans-Homework.git)
 
 通过简单调参，能够将ppl从231.69降到201.54
-执行命令：`bin/NiuTensor.GPU -fnnlm -dev 2 -lrate 0.006 -wbatch 256 -minmax 0.1 -nepoch 5 -n 5 -hdepth 1 -hsize 128 -esize 100 -train data/wsj.train -test data/wsj.test -output work/wsj-1.prob -vsize 10000 -model work/wsj-1.model -autodiff >> out-1.log 2<&1 &`
 
-训练过程如下：
+训练命令：`bin/NiuTensor.GPU -fnnlm -dev 2 -lrate 0.006 -wbatch 256 -minmax 0.1 -nepoch 5 -n 5 -hdepth 1 -hsize 128 -esize 100 -train data/wsj.train -test data/wsj.test -output work/wsj-1.prob -vsize 10000 -model work/wsj-1.model -autodiff`
+
+TODO：
+
+1.使用NiuTensor实现10以内数字的异或
+
+2.实现sequence2sequence模型
+
+> FNNLM训练(ppl=201.54)过程如下：
 ```
 args:
  -dev=3
